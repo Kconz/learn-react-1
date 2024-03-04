@@ -4,13 +4,10 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Students from "./components/students";
 import Header from "./components/header";
+import AddForm from "./components/Form/AddForm";
 
 function App() {
-  const [students, setStudent] = useState([
-    { id: 1, name: "Frong" },
-    { id: 2, name: "Kconz" },
-    { id: 3, name: "Daeng" },
-  ]);
+  const [students, setStudent] = useState([]);
   const [show, setShow] = useState(true);
 
   const deleteStudent = (id) => {
@@ -23,13 +20,16 @@ function App() {
 
   return (
     <>
-      <Header viteLogo={viteLogo} reactLogo={reactLogo}/>
-      <Students
-        students={students}
-        deleteStudent={deleteStudent}
-        toggle={toggle}
-        show={show}
-      />
+      <Header viteLogo={viteLogo} reactLogo={reactLogo} />
+      <div className="wrapper-content">
+        <AddForm students={students} setStudent={setStudent} />
+        <Students
+          students={students}
+          deleteStudent={deleteStudent}
+          toggle={toggle}
+          show={show}
+        />
+      </div>
     </>
   );
 }

@@ -1,0 +1,33 @@
+.wrapper-form {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px;
+  padding: 15px;
+  margin-top: 10px;
+}
+.topic-form {
+  text-align: start;
+  margin: 0;
+}
+.add-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #333;
+  margin: 0 10px;
+  border-radius: 5px;
+  flex-grow: 1;
+  max-width: 600px;
+}
+.btn-save {
+  width: auto;
+  outline: none;
+  margin: 0 5px;
+}
+.selection {
+  padding: 7px;
+  font-size: 18px;
+  border-radius: 5px;
+}
